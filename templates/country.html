@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Country</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css"  href="/static/css/design.css" />
+    <link rel="stylesheet" type="text/css"  href="/static/css/flag-icon-css/css/flag-icon.min.css" />
+    
+    
+
+</head>
+<body>
+
+<div class="container-scifi">
+        <h5>which country would you like to connect ...</h5>
+    </div>
+    <div class="container-scifi"></div>
+    
+
+</div>
+    <div class="background">
+        <div class="container-country">
+                {% for country in countries %}
+                <a href="{% url 'country:operators' country.id %}" class="button" style="text-decoration: none;"><span class="flag-icon flag-icon-{{country.country_flag}}"></span> {{ country.country_name }}</a>
+                {% endfor %}
+              </div>
+            </div>  
+  
+
+
+
+
+
+
+           <script src="/static/js/scifi.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{country.country_name}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"  href="/static/css/design.css" />
+    <link href="http://allfont.net/allfont.css?fonts=orbitron-black" rel="stylesheet" type="text/css" />
+    
+
+</head>
+<body>
+        <div class="container-scifi">
+                <h5>which operator would you like to connect ...</h5>
+        </div>
+                
+                <div class="container-scifi"></div>
+        
+    <div class="background">
+        <div class="container-country">
+                {% for oper in country.operators.all %}
+                <a href="/country/operator/{{oper.id}}/" class="button" style="text-decoration: none;">{{oper.operator_name}}</a>
+                {% endfor %}
+              </div>
+            </div>  
+  
+
+
+
+
+        <script src="/static/js/scifi.js"></script>
+
+
+</body>
+</html>

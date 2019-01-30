@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SpiderNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"  href="/static/css/welcome.css" />
+  
+    
+
+</head>
+<body>
+      <div id="loading" class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Connecting...</p>
+          </div>
+      
+        <div class="container demo">
+                <div class="content">
+                   <div id="large-header" class="large-header">
+                      <canvas id="demo-canvas"></canvas>
+                      <h1 class="main-title"><span class="thin">Spider</span>Net</h1>
+                      <h4 class="second-title"><span class="thin">mobile networks</span></h4>
+                      <div class="flex-grid-center">
+                          <a class="pure-button fuller-button blue" href="{% url 'country:countries'%}">CONNECT</a>
+                         </div>
+                   </div>
+                </div>
+             </div>
+      
+               
+
+         
+           
+<script src="/static/js/jquery.min.js" ></script>
+<script src="/static/js/net.js"></script>
+<script type="text/javascript">
+   $(window).load(function() {
+   $('#loading').hide();
+});
+</script>
+</body>
+</html>
