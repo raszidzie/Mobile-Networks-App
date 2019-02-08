@@ -1,7 +1,7 @@
 body {
     position: relative;
     background-image: url("/static/img/net2-bg.jpg");
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

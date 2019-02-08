@@ -1,11 +1,12 @@
 from django.shortcuts import render,get_object_or_404,HttpResponseRedirect,get_list_or_404
 from .models import *
+from django.utils.text import slugify
 # Create your views here.
 
 
 
-def operator_detail(request, id):
-    detail = get_object_or_404(Operators, id=id)
+def operator_detail(request, slug):
+    detail = get_object_or_404(Operators, slug=slug)
     context={
         'detail':detail,
         
@@ -13,9 +14,9 @@ def operator_detail(request, id):
     template="operator_detail.html"
     return render(request, template, context)
 
-def operators(request, id):
-    country = get_object_or_404(Countries, id=id)
-    operators = Operators.objects.filter(id=id)
+def operators(request, slug):
+    country = get_object_or_404(Countries, slug=slug)
+    operators = Operators.objects.filter(slug=slug)
     context = {
      
         'country':country,
